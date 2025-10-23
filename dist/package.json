@@ -1,0 +1,34 @@
+{
+    "name": "tseggy",
+    "version": "1.0.0",
+    "discription": "A devtool that enables you use Typescript to develop EggyParty Lua Maps",
+    "keywords": ["typescript", "lua", "EggyParty", "cli"],
+    "bin": {
+        "tseggy": "./dist/bin/cli.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc"
+    },
+    "author": "Salicylic <yxsys_0340@qq.com> (https://eggyhub.top)",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/syss11/EggyParty-TypeScript"
+    },
+    "dependencies": {
+        "@types/node": "^24.5.2",
+        "chokidar": "^4.0.3",
+        "commander": "^14.0.1",
+        "fs-extra": "^11.3.2",
+        "inquirer": "^12.10.0",
+        "typescript": "^5.9.2"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^11.0.4",
+        "@types/inquirer": "^9.0.9"
+    }
+}
