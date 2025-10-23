@@ -120,7 +120,7 @@ function startTsToLuaConverter(partialConfig) {
     // 8. 内部工具函数：确保 tsbasic.lua 存在（use_ts_basic_methods 从配置文件读取）
     const ensureTsBasicLuaExists = () => {
         const workDir = __dirname;
-        const srcFile = path_1.default.join(workDir, 'src', 'tslib', 'tsbasic.lua');
+        const srcFile = path_1.default.join(workDir, 'tslib', 'tsbasic.lua');
         const destFile = path_1.default.join(outDir, 'tsbasic.lua');
         try {
             if (fs_1.default.existsSync(destFile))

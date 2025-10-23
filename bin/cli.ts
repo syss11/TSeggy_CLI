@@ -90,7 +90,7 @@ async function initTemplate(force: boolean, includeMd: boolean) {
     }
   }
 
-  console.log(`\n🎉操作完成！`);
+  console.log(`\n操作完成！展开src目录开始编写吧！`);
   if (!includeMd) {
     console.log(`💡 提示：若需包含 README.md 等说明文件，可重新执行 \`tseggy init -i\``);
   }
