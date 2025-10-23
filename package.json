@@ -1,6 +1,6 @@
 {
   "name": "tseggy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "discription": "A devtool that enables you use Typescript to develop EggyParty Lua Maps",
   "keywords": [
     "typescript",
