@@ -207,23 +207,23 @@ export function startTsToLuaConverter(partialConfig?: PartialConfig) {
 
   // 12. 注册进程优雅退出事件（停止监听、释放资源）
   const handleExit = async () => {
-    console.log('\n⚙️  正在停止转换器...');
+    console.log('\n⚙️  正在停止...');
     await watcher.close();
-    console.log('👋 转换器已停止');
+    console.log('👋 已停止');
   };
 
   process.on('SIGINT', handleExit); // Ctrl+C 触发
   process.on('SIGTERM', handleExit); // 进程终止信号触发
 
-  // 13. 打印配置信息（让用户明确当前使用的配置）
-  console.log(`\n📋 当前生效配置:`);
-  console.log(`- 输入目录: ${inDir}（${partialConfig?.inputDir ? '来自参数' : '来自 config.json'}）`);
-  console.log(`- 输出目录: ${outDir}（${partialConfig?.outputDir ? '来自参数' : '来自 config.json'}）`);
-  console.log(`- TS 基础方法支持: ${mergedConfig.use_ts_basic_methods ? '启用' : '禁用'}（来自 config.json）`);
+//   // 13. 打印配置信息（让用户明确当前使用的配置）
+//   console.log(`\n📋 当前生效配置:`);
+//   console.log(`- 输入目录: ${inDir}（${partialConfig?.inputDir ? '来自参数' : '来自 config.json'}）`);
+//   console.log(`- 输出目录: ${outDir}（${partialConfig?.outputDir ? '来自参数' : '来自 config.json'}）`);
+//   console.log(`- TS 基础方法支持: ${mergedConfig.use_ts_basic_methods ? '启用' : '禁用'}（来自 config.json）`);
 
   // 14. 执行初始转换
   convertAllFiles();
-  console.log(`\n⚙️  转换器已启动！监听目录: ${inDir}`);
+  console.log(`\n⚙️  已启动！监听目录: ${inDir}`);
   console.log('➡️  按 Ctrl+C 停止');
 
   // 15. 返回手动控制接口（关闭监听、移除退出事件）
@@ -238,7 +238,7 @@ export function startTsToLuaConverter(partialConfig?: PartialConfig) {
       process.off('SIGTERM', handleExit);
       // 关闭文件监听
       await watcher.close();
-      console.log('🔌 手动停止转换器：资源已释放');
+      console.log('🔌 停止：资源已释放');
     },
     /**
      * 获取当前生效的完整配置（方便外部调试）

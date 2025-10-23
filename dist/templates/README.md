@@ -8,8 +8,21 @@ CLI版本，更方便可用。
 - **Node.js**：本项目使用Node.js环境。
 
 ## 快速开始
-安装tseggy后使用tseggy init -i
+安装Node.js环境后：
+1. 下载CLI：
+```bash
+npm install -g tseggy
+```
+2. 初始化项目:
+```bash
+tseggy init -i
+```
+3. 启动开发模式:
+```bash
 tseggy dev
+```
+
+你可以修改配置文件配置更多。
 
 
 
